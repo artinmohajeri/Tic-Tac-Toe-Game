@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html> -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      position: relative;
+    }
+
+    .table {
+      width: 500px;
+      height: 500px;
+      /* background: grey; */
+      box-shadow: 0px 0px 20px 4px #727272;
+    }
+
+    .home {
+      width: calc(500px/3);
+      height: calc(500px/3);
+      border: 7px solid rgb(184, 184, 184);
+      border-radius: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .home:hover {
+      cursor: pointer;
+    }
+
+    .O {
+      display: none;
+      width: 100px;
+      height: 100px;
+    }
+
+    .X {
+      display: none;
+      width: 100px;
+      height: 100px;
+    }
+
+    .home1 {
+      border-top: none;
+      border-left: none;
+    }
+
+    .home2 {
+      border-top: none;
+    }
+
+    .home3 {
+      border-top: none;
+      border-right: none;
+    }
+
+    .home4 {
+      border-left: none;
+    }
+
+    .home6 {
+      border-right: none;
+    }
+
+    .home7 {
+      border-left: none;
+      border-bottom: none;
+    }
+
+    .home8 {
+      border-bottom: none;
+    }
+
+    .home9 {
+      border-bottom: none;
+      border-right: none;
+    }
+
+    .winner {
+      font-size: 80px;
+      position: absolute;
+      top: calc(50% - 60px);
+      left: 10%;
+    }
+  </style>
+</head>
+
+<body class="text-white bg-black">
+  <div class="winner">
+
+  </div>
+  <div class="container d-flex justify-content-center align-items-center h-100">
+    <div class="table d-flex flex-wrap">
+      <div connect-to-X="X1" connect-to-O="O1" class="home home1"><img connect-to-O="O1" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X1" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X2" connect-to-O="O2" class="home home2"><img connect-to-O="O2" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X2" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X3" connect-to-O="O3" class="home home3"><img connect-to-O="O3" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X3" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X4" connect-to-O="O4" class="home home4"><img connect-to-O="O4" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X4" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X5" connect-to-O="O5" class="home home5"><img connect-to-O="O5" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X5" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X6" connect-to-O="O6" class="home home6"><img connect-to-O="O6" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X6" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X7" connect-to-O="O7" class="home home7"><img connect-to-O="O7" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X7" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X8" connect-to-O="O8" class="home home8"><img connect-to-O="O8" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X8" class="X" src="./img/x.png" alt="X"></div>
+      <div connect-to-X="X9" connect-to-O="O9" class="home home9"><img connect-to-O="O9" class="O" src="./img/o.png"
+          alt="O"><img connect-to-X="X9" class="X" src="./img/x.png" alt="X"></div>
+    </div>
+  </div>
+
+  <script src="./js/animation.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector(".table"), {
+      max: 30,
+      speed: 500,
+      // glare:false,
+      // "max-glare":0.2
+    });
+  </script>
+  <script src="js/Tic Tac Toe.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </script>
+</body>
+
+</html>
