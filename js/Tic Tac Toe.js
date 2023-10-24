@@ -6,6 +6,11 @@ const winText = document.querySelector(".winner");
 const table = document.querySelector(".table");
 const isFinished = false;
 let counter = 0;
+
+
+// if the counter variable is even, when the user clicks the "O" will appear
+// if the counter variable is odd, "X" will appear
+// the home is not usable after once clicked
 for (const home of allHomes) {
   home.addEventListener("click", function click() {
     num++;
@@ -38,6 +43,9 @@ for (const home of allHomes) {
         }
       }
     }
+
+    
+    // difining who is the winner!!
     if (
       allHomes[0].children[0].style.display === "block" &&
       allHomes[1].children[0].style.display === "block" &&
